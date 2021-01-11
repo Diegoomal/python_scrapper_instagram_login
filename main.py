@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-def ExecutarLogin():
+def ExecuteLogin():
     try:  
         driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver')
         driver.get('https://www.instagram.com/accounts/login/')
@@ -51,9 +51,11 @@ def ExecutarLogin():
         print("Exception - Unexpected error:", sys.exc_info()[0])
         driver.quit()
         driver.close()
-    # finally:
-    #     print('close')
-    #     driver.close()
+    finally:
+        pass
 
 if __name__ == "__main__":
-    ExecutarLogin()
+
+    ExecuteLogin()
+
+    input("Press Enter to finish...")
